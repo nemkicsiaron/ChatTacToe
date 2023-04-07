@@ -1,48 +1,46 @@
-.grid-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 300px;
-    border: 3px solid black;
-  }
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
 
-  .grid-row {
-    display: flex;
-    flex-direction: row;
-  }
+.cell {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
 
-  .grid-square {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    font-size: 3rem;
-    cursor: pointer;
-  }
+.cell:hover {
+  background-color: #e3e3e3;
+}
 
-  .grid-square:hover {
-    background-color: lightgray;
-  }
+.cell.x {
+  color: #f44336;
+}
 
-  .game-status {
-    margin-top: 20px;
-    font-size: 2rem;
-  }
+.cell.o {
+  color: #2196f3;
+}
 
-  .restart-button {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    padding: 10px 20px;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .restart-button:hover {
-    background-color: lightgray;
-  }
+.winner {
+  background-color: #c7f6d4;
+  border: 1px solid #a3e9bc;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
